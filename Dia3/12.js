@@ -1,0 +1,16 @@
+const products = [
+  { id: 1, name: "Notebook", price: 3500, quantity: 8 },
+  { id: 2, name: "Mouse", price: 90, quantity: 25 },
+  { id: 3, name: "Teclado", price: 330, quantity: 4 },
+  { id: 4, name: "Monitor", price: 900, quantity: 7 },
+  { id: 5, name: "Headset", price: 250, quantity: 0 }
+];
+
+function calculateTotalStock(products) {
+    const totaltStock = products.reduce((total, product) => total + product.quantity, 0);
+    return totaltStock;
+}
+
+ const totalStock = calculateTotalStock(products);
+
+console.log(totalStock)
